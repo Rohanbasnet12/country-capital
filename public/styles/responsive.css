@@ -1,0 +1,15 @@
+@media (max-width: 995px) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 573px) {
+    .box input {
+        width: 100%;
+    }
+
+    .container h2 {
+        font-size: 1.3rem;
+    }
+}

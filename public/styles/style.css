@@ -1,0 +1,263 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* GENEREL STYLES */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* CSS VARIABLES */
+:root {
+    /* FONT COLORS */
+    --LIGHTBL-COLOR: #9a9a9a50;
+    --BL-COLOR: #9a9a9a;
+}
+
+/* STYLING LOADER(LOADING ANIMATION) */
+#loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#loader h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+#load1 {
+    font-size: .7rem;
+    animation: dot-elastic-before 1s infinite linear;
+}
+
+#load2 {
+    font-size: .7rem;
+    animation: dot-elastic 1s infinite linear;
+}
+
+#load3 {
+    font-size: .7rem;
+    animation: dot-elastic-after 1s infinite linear;
+}
+
+
+@keyframes dot-elastic-before {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1.5);
+    }
+
+    50% {
+        transform: scale(1, 0.67);
+    }
+
+    75% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes dot-elastic {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 1.5);
+    }
+
+    75% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes dot-elastic-after {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 0.67);
+    }
+
+    75% {
+        transform: scale(1, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+/* STYLING MAIN CONTAINER */
+#main {
+    width: 100%;
+    height: 100vh;
+    background: url('../IMG/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 50vw;
+    height: 55vh;
+    border: 2px solid rgba(255, 255, 255, 0.373);
+    border-radius: 18px;
+    backdrop-filter: blur(20px);
+    background-color: #9a9a9a40;
+    padding: 1rem 2rem;
+}
+
+.box {
+    padding: 1rem 0;
+}
+
+.box1 {
+    text-align: left;
+    color: white;
+}
+
+.box2 h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.box2 h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.box3 {
+    padding-top: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.box3 input {
+    outline: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1.32px solid rgb(108, 108, 108);
+    font-size: 1.1rem;
+    width: 50%;
+}
+
+.box4 button {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    background: rgba(255, 221, 0, 0.882);
+    border: none;
+    outline: none;
+    font-size: 1.34rem;
+    width: 100%;
+    padding: .81rem 2rem;
+    border-radius: 9px;
+}
+
+#green {
+    color: green;
+    animation: fadeInOut 1.72s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        /* Start fading in at 10% */
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#red {
+    color: red;
+    animation: fadeInOut 1.72s forwards;
+}
+
+/* STYLING RESULT CONTAINER */
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-container h2 {
+    font-size: 2rem;
+    color: rgb(22, 96, 234);
+    text-shadow: 2px 2px 4px rgb(163, 221, 255)
+}
+
+.restart-button {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 1.52rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.restart-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    bottom: 0;
+    height: 2px;
+    background-color: orangered;
+    transition: all .3s ease-in;
+}
+
+.restart-button:hover::after {
+    left: 0;
+}
